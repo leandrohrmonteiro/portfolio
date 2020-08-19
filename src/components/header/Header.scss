@@ -1,0 +1,37 @@
+#header{
+    flex-flow: row;
+    width: auto;
+    height: 20vh;
+    
+}
+
+#flags{
+        display:flex;
+        align-items: flex-start;
+        padding-top: 5vh;
+    .flag{
+        opacity: 1;
+        background-color: transparent;
+        border-color: transparent;
+        img{
+            height: 2rem;   
+        }  
+    }
+    .flag:focus  {visibility: hidden;}
+}
+
+
+
+#eng{
+    opacity: 1;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.name{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    
+    
+}
