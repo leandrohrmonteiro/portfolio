@@ -1,0 +1,27 @@
+#about{
+    margin-top:15px;
+    
+}
+
+#face{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: #9b9b9b;
+    border-width: 2px;
+    margin-right: 15px;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+#face:hover {
+    transform: scale(1.7); 
+  }
+
+  #contacts{
+      margin-left: 115px;
+  }
+
+.tab{
+    margin-left: 15px;
+}

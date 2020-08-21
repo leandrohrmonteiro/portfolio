@@ -1,51 +1,179 @@
-import React, { useState, useContext} from 'react';
+import React, { useContext } from 'react';
 import { GlobalContext} from '../globalcontext/GlobalContext.js';
 
 import '../personal/Personal.scss'
+import Leo from '../../assets/face.png'
+import Email from '../../assets/icons feather/email.png'
+import SmartPhone from '../../assets/icons feather/smartphone.png'
+import Github from '../../assets/icons feather/github.svg'
 
 function HookPersonal() {
 
-    const globalLanguage = useContext (GlobalContext);
+    const lang = useContext (GlobalContext);
 
-    return(
-        <div className='row'>
-        <div id='about' className='col'><h3 className='title'>About</h3>
-            <div className='row no-gutters'>
-            <div id='about-text' className='col'>
-                <p>An open-minded, interdisciplinary-learner with an interest in multidisciplinary, user-oriented projects.
-                I believe in the free flow of ideas and a healthy mix of pragmatism, empathy, and a sense of humor for the resolution of most, if not all problems.
-                 I have been fortunate enough to work in projects from various fields either as a designer, a project manager, and recently as a developer. In all of those endeavors it was the joint result of the individual contributions that pushed the end result into another level.
-                My belief in social contribution led me to volunteer as a youth teacher on various subjects. </p>
-            </div>
-                <div id='link-col' className='col-1'>
-                    
-                    <div className='link'>{'mobile'}</div>
-                    <div className='link'>{'email'}</div>   
-                    <div className='link'>{'linkdn'}</div>  
-                    <div className='link'>{'github'}</div>
-                    
+    const about = ({
+        aboutPortuguese: (
+            <div className='col-sm-6'>
+            <div  className='col'>
+                <div id='about' className='row no-gutters'>
+                    <img id='face' src={Leo} alt='face foto'/>
+                        <div id='about-text' className='col-9'>
+                            <p>Sou um profissional nas áreas de desenvolvimento Front End e Design 
+                            que trabalha para se manter ao corrente dos últimos desenvolvimentos 
+                            nas áreas de programação e design para criar soluções que vão de encontro 
+                            com as necessidades do mercado.
+                            </p>
+                        </div>
                 </div>
             </div>
+            <div id='contacts' className='col' style={{marginTop: '40px'}}>
+
+                <p>
+                    <img src={SmartPhone} alt='smartphone' style={{height: '30px', width: '20px', marginRight: '20px', marginLeft: '5px'}}/>
+                    +351 93 423 84 48
+                </p>
+                <p>
+                    <img src={Email} alt='email' style={{height: '20px', width: '30px', marginRight: '20px'}}/>
+                    leandro.hugo.monteiro@gmail.com
+                </p>
+                <p>
+                    <img src={Github} alt='github' style={{height: '30px', width: '30px', marginRight: '20px'}}/>
+                    https://github.com/leandrohrmonteiro
+                </p>                             
+            </div>  
+
+            <div className='col' style={{marginTop: '70px'}}>
+                <h3>Percurso Profissional</h3>
+                <ul>
+                    <li>
+                        <p>
+                        2009 / Presente<b className='tab'>Designer Freelancer</b> <br/>
+                         Criação de conteúdo digital 2D/3D.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                        2018 / 2019<b className='tab'>Designer de Produto</b> (Sciencentrics)<br/>
+                        Idealização, investigação e desenvolvimento de produto
+                        na área da recuperação física.
+                        </p>
+                    </li>
+                        
+                    <li>
+                    
+                        <p>
+                        2011<b className='tab'>Designer Gráfico</b> (Menina Design)<br/>
+                        Criação de conteúdo digital 2D.
+                        </p>
+                    
+                   </li>
+                </ul>
+                        <h3 style={{marginTop: '70px'}}>Percurso Académico</h3>
+                <ul>
+                    <p>
+                        <li>2020 <b className='tab'>Full-Stack Developer</b> (&lt;Academia de Código_)<br/></li>
+                    </p>
+                    <p>
+                        <li>2018 <b className='tab'>Design de Produto e Prototipagem</b> (AFTEBI/CITEVE)</li>
+                    </p>
+                    <p>
+                        <li>2012/2014 <b className='tab'>Ilustração e Animação 2D/3D</b> (IPCA)</li>
+                    </p>
+                    <p>
+                        <li>2009/2012 <b className='tab'>Design Gráfico e Web</b> (ESAD)</li>
+                    </p>
+                    
+                </ul>
+            </div>
         </div>
-        <div id='interval'></div>   
-        <div id='track' className='col'><h3 className='title'>Professional Track</h3>
-            <ul>
-                <li>2009 / Present - <b className='highlight'>Freelance Designer</b> (Various Clients)<br/>Designed digital and print marketing materials for various clients.</li>
-                <li>2018 / 2019 - <b className='highlight'>Product Designer</b> (Sciencentrics)<br/>Ideation, research, and development of compression wear
-                    product for professionals to aid in fatigue recovery.</li>
-                <li>2011 - <b className='highlight'>Graphic Designer</b> (Menina Design)<br/>Digital image editing· Designed tradeshow display stands</li>
-            </ul>
-        <h3>Academic Track</h3>
-            <ul>
-                <li>2020 Full-Stack Developer (&lt;Academia de Código_>)<br/></li>
-                <li>2018 Product Design and Prototyping (AFTEBI/CITEVE)</li>
-                <li>2012/2014 2D/3D Illustration & Motion Graphics (IPCA)</li>
-                <li>2009/2012 Graphic & Web Design (ESAD)</li>
-            </ul>
+        ),
+
+        aboutEnglish: (
+            <div className='col-sm-6'>
+            <div  className='col'>
+                <div id='about' className='row no-gutters'>
+                    <img id='face' src={Leo} alt='face foto'/>
+                        <div id='about-text' className='col-9'>
+                            <p>I am a profissional in Front End Development and Design 
+                            who works to keep up with the latest developments
+                            in programming and design trends to create solutions that meet and satisfy market needs.
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <div id='contacts' className='col' style={{marginTop: '40px'}}>
+
+                <p>
+                    <img src={SmartPhone} alt='smartphone' style={{height: '30px', width: '20px', marginRight: '20px', marginLeft: '5px'}}/>
+                    +351 93 423 84 48
+                </p>
+                <p>
+                    <img src={Email} alt='email' style={{height: '20px', width: '30px', marginRight: '20px'}}/>
+                    leandro.hugo.monteiro@gmail.com
+                </p>
+                <p>
+                    <img src={Github} alt='github' style={{height: '30px', width: '30px', marginRight: '20px'}}/>
+                    https://github.com/leandrohrmonteiro
+                </p>                             
+            </div>  
+
+            <div className='col' style={{marginTop: '70px'}}>
+                <h3>Professional Track</h3>
+                <ul>
+                    <li>
+                        <p>
+                        2009 / Present<b className='tab'>FreelancerDesigner</b> <br/>
+                        2D/3D digital content creation.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                        2018 / 2019<b className='tab'>Product Designer</b> (Sciencentrics)<br/>
+                        Ideation, research and development of product in the physical recovery area.
+                        </p>
+                    </li>
+                        
+                    <li>
+                    
+                        <p>
+                        2011<b className='tab'>Graphic Designer</b> (Menina Design)<br/>
+                        2D digital content creation.
+                        </p>
+                    
+                   </li>
+                </ul>
+                        <h3 style={{marginTop: '70px'}}>Academic Track</h3>
+                <ul>
+                    <p>
+                        <li>2020 <b className='tab'>Full-Stack Developer</b> (&lt;Academia de Código_)<br/></li>
+                    </p>
+                    <p>
+                        <li>2018 <b className='tab'>Product Design and Prototyping</b> (AFTEBI/CITEVE)</li>
+                    </p>
+                    <p>
+                        <li>2012/2014 <b className='tab'>2D/3D Illustration & Motion Graphics</b> (IPCA)</li>
+                    </p>
+                    <p>
+                        <li>2009/2012 <b className='tab'>Graphic & Web Design</b> (ESAD)</li>
+                    </p>
+                    
+                </ul>
+            </div>
         </div>
-    </div>
-    
-   
+        )
+    });
+
+    const chooseAbout = () => {
+        if(lang[0]==='port'){return(about.aboutPortuguese)}
+        if(lang[0]==='eng'){return(about.aboutEnglish)}   
+    }
+
+
+
+    return(
+        chooseAbout()
     )
 };
 

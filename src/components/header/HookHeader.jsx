@@ -11,29 +11,32 @@ function HookHeader() {
   const [lang, setLang] = useContext(GlobalContext);
 
   const [flag, setFlag] = useState({
-    flagPort: PortActive,
-    flagPortDisabled: false,
-    flagEng: EngInactive,
-    flagEngDisabled: true,
+    flagPort: PortInactive,
+    flagPortDisabled: true,
+    flagEng: EngActive,
+    flagEngDisabled: false,
+    name: 'Desenvolvimento Front End',
   });
 
-  let chooseEng = () => {
+  let chooseEngLang = () => {
     setLang("eng");
-    setFlag({
-      flagPort: PortInactive,
-      flagPortDisabled: true,
-      flagEng: EngActive,
-      flagEngDisabled: false,
-    });
-  };
-
-  let choosePort = () => {
-    setLang("port");
     setFlag({
       flagPort: PortActive,
       flagPortDisabled: false,
       flagEng: EngInactive,
       flagEngDisabled: true,
+      name: 'Front End Development'
+    });
+  };
+
+  let choosePortLang = () => {
+    setLang("port");
+    setFlag({
+      flagPort: PortInactive,
+      flagPortDisabled: true,
+      flagEng: EngActive,
+      flagEngDisabled: false,
+      name: 'Desenvolvimento Front End',
     });
   };
 
@@ -44,14 +47,14 @@ function HookHeader() {
       <div className="col-1"></div>
       <div className="col-10">
         <h2 className="name col">Leandro Monteiro</h2>
-        <h4 className="name col">Front End Development</h4>
+        <h4 className="name col">{flag.name}</h4>
       </div>
       <div id="flags" className="col-1">
         <button
           id="port"
           className="flag"
           disabled={flag.flagPortDisabled}
-          onClick={chooseEng}
+          onClick={choosePortLang}
         >
           <img src={flag.flagPort} alt="port active" />
         </button>
@@ -59,7 +62,7 @@ function HookHeader() {
           id="eng"
           className="flag"
           disabled={flag.flagEngDisabled}
-          onClick={choosePort}
+          onClick={chooseEngLang}
         >
           <img src={flag.flagEng} alt="eng active" />
         </button>
