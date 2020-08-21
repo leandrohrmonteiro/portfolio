@@ -4,12 +4,12 @@
 }
 
 .carousel-indicators{
-   top: 380px; 
-   height: 10px;
+   top: 0px; 
+   position: relative;
 }
 .carousel-control-next, .carousel-control-prev{
-   top: -150px; 
-   height: 700px;
+   top: 0px; 
+   height: 30px;
 }
 
 .code:hover {

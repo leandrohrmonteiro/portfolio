@@ -1,7 +1,7 @@
+
 #header{
     flex-flow: row;
-    width: auto;
-    height: 20vh;
+    padding-bottom: 50px;
     
 }
 
@@ -32,7 +32,14 @@
     font-size: 190%;
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
-    text-align: center;
-    
-    
+    text-align: center;   
 }
+
+@media only screen and (max-width: 600px) {
+    #header{
+        height: auto;
+        }
+    #flags .flag img {
+            height: 1.5rem;
+        }
+    }

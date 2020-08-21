@@ -19,14 +19,14 @@ const synopsis = ({
                 para devolver listas de filmes e informação detalhada de cada filme.</p>
 
             <h3>Características:</h3>
-            <p>
+            
             <ul>
                 <li>Campo de Busca</li> 
                 <li>Mudança de página por injecção de conteúdo</li>
                 <li>Injecção assíncrona de conteúdo</li>
                 <li>Arquitectura modular MVC </li>
             </ul>
-            </p>
+            
             <h3>Tecnologia usada:</h3>
             <ul>
                 <li>Javascript ES6</li> 
@@ -46,14 +46,14 @@ const synopsis = ({
                 to return movie lists and individual movie info.
             </p>
              <h3>Features:</h3>
-             <p>
+            
                 <ul>
                     <li>Search form</li> 
                     <li>Hash based non reload view change</li>
                     <li>Asynchronous view content injection</li>
                     <li>Module MVC architecture </li>
                 </ul>
-            </p>
+            
             <h3>Tecnology used:</h3>
             <ul>
                 <li>Javascript ES6</li> 
@@ -73,13 +73,13 @@ const synopsis = ({
                 que podem ser editados, acrescidos ou retirados sem perturbar o comportamento regular da página.</p>
     
                 <h3>Características:</h3>
-                <p>
+                
                 <ul>
                     <li>Arquitectura Modular</li> 
                     <li>Componentes com acesso ao Contexto Global</li>
                     <li>Encapsulamento e divisão de responsabilidades</li>
                 </ul>
-                </p>
+                
                 <h3>Tecnologia usada:</h3>
                 <ul>
                     <li>Javascript ES6</li> 
@@ -103,13 +103,13 @@ const synopsis = ({
                 that can be added or subtracted without disturbing the normal behaviour of the page.
                 </p>
                  <h3>Features:</h3>
-                 <p>
+                
                     <ul>
                         <li>Modular Architecture</li> 
                         <li>Components with access to the Global Context</li>
                         <li>Encapsulation and division of responsabilities</li>
                     </ul>
-                </p>
+                
                 <h3>Tecnology used:</h3>
                 <ul>
                     <li>Javascript ES6</li> 
@@ -132,13 +132,13 @@ const synopsis = ({
     
 
     <h3>Características:</h3>
-    <p>
+    
     <ul>
         <li>Cursor usa cor seleccionada</li> 
         <li>Diz cor escolhida aquando selecção</li>
         <li>Salva e recupera ficheiro criado</li>
     </ul>
-    </p>
+    
     <h3>Tecnologia usada:</h3>
     <ul>
         <li>Java 11</li> 
@@ -158,13 +158,13 @@ thirdSlideEnglish: (
            Changes the cursor color and states the color selected when color selection is performed.
         </p>
          <h3>Features:</h3>
-         <p>
+         
             <ul>
                 <li>Cursor changes into selected color</li> 
                 <li>Says selected color when color selection is performed</li>
                 <li>Saves and loads current file into separate document</li>
             </ul>
-        </p>
+        
         <h3>Tecnology used:</h3>
         <ul>
             <li>Java 11</li> 
@@ -207,7 +207,7 @@ return(
 
                 <div className="carousel-item active">           
                 <img className='img-fluid' src={ProjectOneScreen} alt="first project" />   
-                    <div className="d-none d-md-block">
+                    <div className="d-md-block">
                         {firstSlide()}
                         <p></p>
                     </div>
@@ -215,7 +215,7 @@ return(
 
                 <div className="carousel-item">
                 <img className='img-fluid' src={ProjectTwoScreen} alt="second project" />  
-                    <div className="d-none d-md-block">
+                    <div className="d-md-block">
                     {secondSlide()}
                     <p></p>
                     </div>
@@ -224,7 +224,7 @@ return(
 
                 <div className="carousel-item">
                 <img className='img-fluid' src={ProjectThreeScreen} alt="third project" />
-                    <div className="d-none d-md-block">
+                    <div className="d-md-block">
                     {thirdSlide()}
                         <p></p>
                     </div>

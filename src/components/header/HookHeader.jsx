@@ -11,9 +11,9 @@ function HookHeader() {
   const [lang, setLang] = useContext(GlobalContext);
 
   const [flag, setFlag] = useState({
-    flagPort: PortInactive,
+    flagPort: PortActive,
     flagPortDisabled: true,
-    flagEng: EngActive,
+    flagEng: EngInactive,
     flagEngDisabled: false,
     name: 'Desenvolvimento Front End',
   });
@@ -21,9 +21,9 @@ function HookHeader() {
   let chooseEngLang = () => {
     setLang("eng");
     setFlag({
-      flagPort: PortActive,
+      flagPort: PortInactive,
       flagPortDisabled: false,
-      flagEng: EngInactive,
+      flagEng: EngActive,
       flagEngDisabled: true,
       name: 'Front End Development'
     });
@@ -32,9 +32,9 @@ function HookHeader() {
   let choosePortLang = () => {
     setLang("port");
     setFlag({
-      flagPort: PortInactive,
+      flagPort: PortActive,
       flagPortDisabled: true,
-      flagEng: EngActive,
+      flagEng: EngInactive,
       flagEngDisabled: false,
       name: 'Desenvolvimento Front End',
     });
@@ -44,12 +44,12 @@ function HookHeader() {
 
   return (
     <div id="header" className="row">
-      <div className="col-1"></div>
-      <div className="col-10">
+      <div className="col-lg-1"></div>
+      <div className="col-lg-10">
         <h2 className="name col">Leandro Monteiro</h2>
         <h4 className="name col">{flag.name}</h4>
       </div>
-      <div id="flags" className="col-1">
+      <div id="flags" className="col-lg-1">
         <button
           id="port"
           className="flag"
