@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dfc670afe18f436d0b9a5ed941e34b12",
+    "revision": "faea9896ac1acb41a0617bb25dd20169",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "9dd1cd4aac42045cf9f1",
+    "revision": "0748b0ad03869f5af349",
     "url": "/portfolio/static/css/main.325b4d46.chunk.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.a68557bc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9dd1cd4aac42045cf9f1",
-    "url": "/portfolio/static/js/main.8587d583.chunk.js"
+    "revision": "0748b0ad03869f5af349",
+    "url": "/portfolio/static/js/main.37d1ca7b.chunk.js"
   },
   {
     "revision": "7a6cc99bd8f08f9fa6ec",
     "url": "/portfolio/static/js/runtime-main.209c2d7e.js"
   },
   {
-    "revision": "f695a202486e21b0f3579b60d2cc68bd",
-    "url": "/portfolio/static/media/daPainter.f695a202.png"
+    "revision": "04354dc013d23637bdbce2b53ac0fc01",
+    "url": "/portfolio/static/media/daPainter.04354dc0.png"
   },
   {
     "revision": "0f55e2011d434c73183c1089e0206286",
@@ -40,11 +40,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/github.940c30ac.svg"
   },
   {
-    "revision": "d6e1c23d839cc9f01c3bf0d29d7e7c06",
-    "url": "/portfolio/static/media/movieDatabaseSearch.d6e1c23d.png"
+    "revision": "b5548e54573a42ca48840614c239ed4e",
+    "url": "/portfolio/static/media/movieDatabaseSearch.b5548e54.png"
   },
   {
-    "revision": "0424ba5620a519b878c086f9493db96a",
-    "url": "/portfolio/static/media/reactPortfolio.0424ba56.png"
+    "revision": "6455719c1b6c89d8de65f52c0597a6cf",
+    "url": "/portfolio/static/media/reactPortfolio.6455719c.png"
   }
 ]);
