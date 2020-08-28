@@ -18,6 +18,8 @@ function HookHeader() {
     name: 'Desenvolvimento Front End',
   });
 
+
+
   let chooseEngLang = () => {
     setLang("eng");
     setFlag({
@@ -52,20 +54,22 @@ function HookHeader() {
       <div id="flags" className="col-lg-1">
         <button
           id="port"
-          className="flag"
+          className="flagstyle"
           disabled={flag.flagPortDisabled}
           onClick={choosePortLang}
         >
+        
           <img src={flag.flagPort} alt="port active" />
         </button>
         <button
           id="eng"
-          className="flag"
+          className="flagstyle"
           disabled={flag.flagEngDisabled}
           onClick={chooseEngLang}
         >
           <img src={flag.flagEng} alt="eng active" />
         </button>
+       
       </div>
     </div>
   );
