@@ -9,6 +9,7 @@ import {GlobalContextProvider} from './components/globalcontext/GlobalContext.js
 import HookHeader from './components/header/HookHeader.jsx';
 import HookCaroussel from './components/caroussel/HookCaroussel.jsx';
 import HookPersonal from './components/personal/HookPersonal.jsx';
+import MyEditor from './components/drafteditor/DraftEditor.js'
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <HookCaroussel />
           <HookPersonal />
         </div>
+        <MyEditor />
       </div>
     </GlobalContextProvider>
  
