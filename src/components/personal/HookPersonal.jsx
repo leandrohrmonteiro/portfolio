@@ -9,7 +9,7 @@ import Github from '../../assets/icons feather/github.svg'
 
 function HookPersonal() {
 
-    const lang = useContext (GlobalContext);
+    const [globalContext] = useContext (GlobalContext);
 
     const about = ({
         aboutPortuguese: (
@@ -95,7 +95,7 @@ function HookPersonal() {
                 <div id='about' className='row no-gutters'>
                     <img id='face' src={Leo} alt='face foto'/>
                         <div id='about-text' className='col-9'>
-                            <p>I am a profissional in Front End Development and Design 
+                            <p>I am a professional in Front End Development and Design 
                             who works to keep up with the latest developments
                             in programming and design trends to create solutions that meet and satisfy market needs.
                             </p>
@@ -123,7 +123,7 @@ function HookPersonal() {
                 <ul>
                     <li>
                         <p>
-                        2009 / Present<b className='tab'>FreelancerDesigner</b> <br/>
+                        2009 / Present<b className='tab'>Freelance Designer</b> <br/>
                         2D/3D digital content creation.
                         </p>
                     </li>
@@ -166,8 +166,8 @@ function HookPersonal() {
     });
 
     const chooseAbout = () => {
-        if(lang[0]==='port'){return(about.aboutPortuguese)}
-        if(lang[0]==='eng'){return(about.aboutEnglish)}   
+        if(globalContext.lang ==='port'){return(about.aboutPortuguese)}
+        if(globalContext.lang==='eng'){return(about.aboutEnglish)}   
     }
 
 

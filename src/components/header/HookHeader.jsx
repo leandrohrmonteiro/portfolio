@@ -8,7 +8,7 @@ import EngActive from "../../assets/icons flags/uk.png";
 import EngInactive from "../../assets/icons flags/ukBW.png";
 
 function HookHeader() {
-  const [lang, setLang] = useContext(GlobalContext);
+  const [globalContext, setGlobalContext] = useContext(GlobalContext);
 
   const [flag, setFlag] = useState({
     flagPort: PortActive,
@@ -21,7 +21,7 @@ function HookHeader() {
 
 
   let chooseEngLang = () => {
-    setLang("eng");
+    setGlobalContext((prevState  => ({ ...prevState,   lang: 'eng',})));
     setFlag({
       flagPort: PortInactive,
       flagPortDisabled: false,
@@ -32,7 +32,7 @@ function HookHeader() {
   };
 
   let choosePortLang = () => {
-    setLang("port");
+    setGlobalContext((prevState  => ({ ...prevState,   lang: 'port',})));
     setFlag({
       flagPort: PortActive,
       flagPortDisabled: true,
@@ -42,7 +42,7 @@ function HookHeader() {
     });
   };
 
-  console.log(`language from global context is: ${lang}`);
+  console.log(`language from global context is: ${globalContext.lang}`);
 
   return (
     <div id="header" className="row">

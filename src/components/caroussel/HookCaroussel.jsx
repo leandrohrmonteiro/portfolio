@@ -4,12 +4,13 @@ import { GlobalContext } from '../globalcontext/GlobalContext.js';
 import '../caroussel/Caroussel.scss';
 import ProjectOneScreen from '../../assets/project screenshots/movieDatabaseSearch.png'
 import ProjectTwoScreen from '../../assets/project screenshots/reactPortfolio.png'
-import ProjectThreeScreen from '../../assets/project screenshots/daPainter.png'
+import ProjectThreeScreen from '../../assets/project screenshots/markdownEditor.png'
 import FileCode from '../../assets/icons feather/file-plus.svg'
 
 function Caroussel() {
 //just using the read argument in useContext, don't want to change state from here.
-const lang = useContext(GlobalContext);
+const [globalContext, setGlobalContext] = useContext(GlobalContext);
+const sendToEditorProject = () => setGlobalContext((prevState  => ({ ...prevState,   render: 'projectDraftEditor',})));
 
 const synopsis = ({
     firstSlidePortuguese: (
@@ -41,8 +42,8 @@ const synopsis = ({
         ),
     firstSlideEnglish: (
         <div className='synopsis'>
-            <h3>Movie SearchEngine (Single Page Aplication)</h3> 
-            <p>This spa makes use of the [OMDB api] <a href='http://www.omdbapi.com/'>http://www.omdbapi.com/</a>
+            <h3>Movie Search Engine (Single Page Application)</h3> 
+            <p>This SPA makes use of the [OMDB api] <a href='http://www.omdbapi.com/'>http://www.omdbapi.com/</a>
                 to return movie lists and individual movie info.
             </p>
              <h3>Features:</h3>
@@ -54,7 +55,7 @@ const synopsis = ({
                     <li>Module MVC architecture </li>
                 </ul>
             
-            <h3>Tecnology used:</h3>
+            <h3>Technology used:</h3>
             <ul>
                 <li>Javascript ES6</li> 
                 <li>HTML 5</li>
@@ -107,10 +108,10 @@ const synopsis = ({
                     <ul>
                         <li>Modular Architecture</li> 
                         <li>Components with access to the Global Context</li>
-                        <li>Encapsulation and division of responsabilities</li>
+                        <li>Encapsulation and division of responsibilities</li>
                     </ul>
                 
-                <h3>Tecnology used:</h3>
+                <h3>Technology used:</h3>
                 <ul>
                     <li>Javascript ES6</li> 
                     <li>HTML 5</li>
@@ -127,68 +128,82 @@ const synopsis = ({
             ),
     thirdSlidePortuguese: (
     <div className='synopsis'>
-    <h3>Programa de Pintura</h3> 
-    <p> Esta aplicação faz uso de uma biblioteca de gráficos e uma biblioteca de som.<br /> Muda a cor do cursor e diz que cor foi escolhida na selecção de cor.</p>
+
+    <button onMouseDown={sendToEditorProject}  className='code'>
+        Usar o Editor
+    </button>
+    
+
+    <h3>Editor de texto Markdown</h3> 
+    <p> Esta aplicação usa Draft.js como base para um editor de texto com capacidades markdown.</p>
     
 
     <h3>Características:</h3>
     
     <ul>
-        <li>Cursor usa cor seleccionada</li> 
-        <li>Diz cor escolhida aquando selecção</li>
-        <li>Salva e recupera ficheiro criado</li>
+        <li>Activar e desactivar multiplos estilos no mesmo texto.</li> 
+        <li>Comparar texto estilizado com o equivalente em markdown na janela inferior.</li>
+        <li>Gravar resultado de sessão num ficheiro de extensão txt.</li>
     </ul>
     
     <h3>Tecnologia usada:</h3>
     <ul>
-        <li>Java 11</li> 
-        <li>Biblioteca de gráficos (simplegraphics)</li>
-        <li>Biblioteca de sons (sound-library)</li>
+    <li>React.js</li> 
+            <li>Draft.js</li>
+            <li>Javascript ES6</li>
+            <li>Jsx</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>sass</li>
+            <li>Bootstrap</li>
     </ul>
-    <h3>Ver código: </h3>
-    <a href='https://github.com/leandrohrmonteiro/showCase/tree/master/DaPainter'>
-        <img src={FileCode} alt="see code" className='code'/>
-    </a>
+
+   
 </div>
 ),
 thirdSlideEnglish: (
     <div className='synopsis'>
-        <h3>Painter Aplication</h3> 
-        <p>This aplication uses graphics and sound libraries.<br />
-           Changes the cursor color and states the color selected when color selection is performed.
+
+    <button onMouseDown={sendToEditorProject}  className='code'>
+        Use the Editor
+    </button>
+        <h3>Markdown text editor</h3> 
+        <p>This application uses Draft.js as a basis for a rich text editor with markdown capabilities.<br />
         </p>
          <h3>Features:</h3>
          
             <ul>
-                <li>Cursor changes into selected color</li> 
-                <li>Says selected color when color selection is performed</li>
-                <li>Saves and loads current file into separate document</li>
+                <li>Toggling multiple text styles.</li> 
+                <li>Comparing stylized text to its markdown equivalent in the bottom window.</li>
+                <li>Save session in a txt file.</li>
             </ul>
         
-        <h3>Tecnology used:</h3>
+        <h3>Technology used:</h3>
         <ul>
-            <li>Java 11</li> 
-            <li>Graphics library (simplegraphics)</li>
-            <li>Sound library (sound-library)</li>
+            <li>React.js</li> 
+            <li>Draft.js</li>
+            <li>Javascript ES6</li>
+            <li>Jsx</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>sass</li>
+            <li>Bootstrap</li>
         </ul>
-        <h3>See code: </h3>
-        <a  href='https://github.com/leandrohrmonteiro/showCase/tree/master/DaPainter'>
-            <img src={FileCode} alt="see code" className='code'/>
-        </a>
+        
     </div>
     ),
 })
 const firstSlide = () => {
-    if(lang[0]==='port'){return(synopsis.firstSlidePortuguese)}
-    if(lang[0]==='eng'){return(synopsis.firstSlideEnglish)}   
+    if(globalContext.lang ==='port'){return(synopsis.firstSlidePortuguese)}
+    if(globalContext.lang==='eng'){return(synopsis.firstSlideEnglish)}   
 }
 const secondSlide = () => {
-    if(lang[0]==='port'){return(synopsis.secondSlidePortuguese)}
-    if(lang[0]==='eng'){return(synopsis.secondSlideEnglish)}   
+    if(globalContext.lang ==='port'){return(synopsis.secondSlidePortuguese)}
+    if(globalContext.lang==='eng'){return(synopsis.secondSlideEnglish)}   
 }
 const thirdSlide = () => {
-    if(lang[0]==='port'){return(synopsis.thirdSlidePortuguese)}
-    if(lang[0]==='eng'){return(synopsis.thirdSlideEnglish)}   
+    if(globalContext.lang ==='port'){return(synopsis.thirdSlidePortuguese)}
+    if(globalContext.lang==='eng'){return(synopsis.thirdSlideEnglish)}   
 }
 
 
@@ -206,9 +221,9 @@ return(
             <div className="carousel-inner">
 
                 <div className="carousel-item active">           
-                <img className='img-fluid' src={ProjectOneScreen} alt="first project" />   
+                <img className='img-fluid' src={ProjectThreeScreen} alt="third project" />   
                     <div className="d-md-block">
-                        {firstSlide()}
+                        {thirdSlide()}
                         <p></p>
                     </div>
                 </div>
@@ -223,9 +238,9 @@ return(
 
 
                 <div className="carousel-item">
-                <img className='img-fluid' src={ProjectThreeScreen} alt="third project" />
+                <img className='img-fluid' src={ProjectOneScreen} alt="first project" />
                     <div className="d-md-block">
-                    {thirdSlide()}
+                    {firstSlide()}
                         <p></p>
                     </div>
                 </div>

@@ -1,0 +1,15 @@
+input[type="button"] {
+    background-color: #303030;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 2px;
+    margin-bottom: 2px; 
+  }
+
+  input[type="button"]:not(.active):hover {
+    background-color: red;
+    transition: 0.3s;
+  }
+
+  

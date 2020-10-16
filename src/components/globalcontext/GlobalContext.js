@@ -6,9 +6,12 @@ export const GlobalContext = createContext();
 
 
 export const GlobalContextProvider = props => {
-    const [lang, setLang] = useState('port')
+    const [globalContext, setGlobalContext] = useState({
+        lang: 'port',
+        render: 'landingPage'});
+    
     return (
-        <GlobalContext.Provider value={[lang, setLang]}>
+        <GlobalContext.Provider value={[globalContext, setGlobalContext]}>
             {props.children}
         </GlobalContext.Provider>
         

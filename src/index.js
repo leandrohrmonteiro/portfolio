@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './App.jsx';
 import * as serviceWorker from './serviceWorker';
 
+import {GlobalContextProvider} from './components/globalcontext/GlobalContext.js';
+
 ReactDOM.render(
+  
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <GlobalContextProvider>
+      <App />
+    </GlobalContextProvider>
+  </React.StrictMode>
+  ,
   document.getElementById('root')
 );
 
