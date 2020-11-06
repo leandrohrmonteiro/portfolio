@@ -5,12 +5,14 @@ import '../caroussel/Caroussel.scss';
 import ProjectOneScreen from '../../assets/project screenshots/movieDatabaseSearch.png'
 import ProjectTwoScreen from '../../assets/project screenshots/reactPortfolio.png'
 import ProjectThreeScreen from '../../assets/project screenshots/markdownEditor.png'
+import ProjectFourScreen from '../../assets/project screenshots/daPainter.png'
 import FileCode from '../../assets/icons feather/file-plus.svg'
 
 function Caroussel() {
-//just using the read argument in useContext, don't want to change state from here.
+
 const [globalContext, setGlobalContext] = useContext(GlobalContext);
 const sendToEditorProject = () => setGlobalContext((prevState  => ({ ...prevState,   render: 'projectDraftEditor',})));
+const sendToGitTerminalHelper = () => setGlobalContext((prevState  => ({ ...prevState,   render: 'projectGitTerminalHelper',})));
 
 const synopsis = ({
     firstSlidePortuguese: (
@@ -192,6 +194,72 @@ thirdSlideEnglish: (
         
     </div>
     ),
+    fourthSlidePortuguese: (
+        <div className='synopsis'>
+    
+        <button onMouseDown={sendToGitTerminalHelper}  className='code'>
+            Usar o Editor
+        </button>
+        
+    
+        <h3>Tutor de comandos de terminal para Git</h3> 
+        <p> Esta aplicação usa Draft.js como base para um editor de texto com capacidades markdown.</p>
+        
+    
+        <h3>Características:</h3>
+        
+        <ul>
+            <li>Activar e desactivar multiplos estilos no mesmo texto.</li> 
+            <li>Comparar texto estilizado com o equivalente em markdown na janela inferior.</li>
+            <li>Gravar resultado de sessão num ficheiro de extensão txt.</li>
+        </ul>
+        
+        <h3>Tecnologia usada:</h3>
+        <ul>
+        <li>React.js</li> 
+                <li>Draft.js</li>
+                <li>Javascript ES6</li>
+                <li>Jsx</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>sass</li>
+                <li>Bootstrap</li>
+        </ul>
+    
+       
+    </div>
+    ),
+    fourthSlideEnglish: (
+        <div className='synopsis'>
+    
+        <button onMouseDown={sendToGitTerminalHelper}  className='code'>
+            Use the Editor
+        </button>
+            <h3>Git terminal command helper</h3> 
+            <p>This application uses Draft.js as a basis for a rich text editor with markdown capabilities.<br />
+            </p>
+             <h3>Features:</h3>
+             
+                <ul>
+                    <li>Toggling multiple text styles.</li> 
+                    <li>Comparing stylized text to its markdown equivalent in the bottom window.</li>
+                    <li>Save session in a txt file.</li>
+                </ul>
+            
+            <h3>Technology used:</h3>
+            <ul>
+                <li>React.js</li> 
+                <li>Draft.js</li>
+                <li>Javascript ES6</li>
+                <li>Jsx</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>sass</li>
+                <li>Bootstrap</li>
+            </ul>
+            
+        </div>
+        ),
 })
 const firstSlide = () => {
     if(globalContext.lang ==='port'){return(synopsis.firstSlidePortuguese)}
@@ -205,6 +273,10 @@ const thirdSlide = () => {
     if(globalContext.lang ==='port'){return(synopsis.thirdSlidePortuguese)}
     if(globalContext.lang==='eng'){return(synopsis.thirdSlideEnglish)}   
 }
+const fourthSlide = () => {
+    if(globalContext.lang ==='port'){return(synopsis.fourthSlidePortuguese)}
+    if(globalContext.lang==='eng'){return(synopsis.fourthSlideEnglish)}   
+}
 
 
 
@@ -217,10 +289,20 @@ return(
                 <li data-target="#carouselWithIndicators" data-slide-to="0" className="active"></li>
                 <li data-target="#carouselWithIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselWithIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselWithIndicators" data-slide-to="3"></li>
             </ol>
             <div className="carousel-inner">
 
-                <div className="carousel-item active">           
+                
+            <div className="carousel-item active">           
+                <img className='img-fluid' src={ProjectFourScreen} alt="fourth project" />   
+                    <div className="d-md-block">
+                        {fourthSlide()}
+                        <p></p>
+                    </div>
+                </div>
+                
+                <div className="carousel-item">           
                 <img className='img-fluid' src={ProjectThreeScreen} alt="third project" />   
                     <div className="d-md-block">
                         {thirdSlide()}

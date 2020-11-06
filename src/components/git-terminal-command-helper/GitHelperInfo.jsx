@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../globalcontext/GlobalContext.js";
 
-import '../drafteditor/DraftEditorInfo.scss'
 
 
-const MyEditorInfo = () => {
+
+const GitHelperInfo = () => {
 
     const [globalContext, setGlobalContext] = useContext(GlobalContext);
 
     const backToLandingPage = () => setGlobalContext((prevState  => ({ ...prevState,   render: 'landingPage',})));
 
-    const editorInfoEng = () => {
+    const infoEng = () => {
         return (
             <div className='col-sm-5 data-interval="false";' >
             <h3>Instructions:</h3><br/>
@@ -30,7 +30,7 @@ const MyEditorInfo = () => {
         )
     }
 
-    const editorInfoPort = () => {
+    const infoPort = () => {
         return (
             <div className='col-sm-5 data-interval="false";' >
             <h3>Instruções:</h3><br/>
@@ -50,14 +50,14 @@ const MyEditorInfo = () => {
         )
     }
 
-    const chooseDraftEditorInfo = () => {
-        if(globalContext.lang ==='port'){return(editorInfoPort())}
-        if(globalContext.lang==='eng'){return(editorInfoEng())}   
+    const chooseInfoToRender = () => {
+        if(globalContext.lang ==='port'){return(infoPort())}
+        if(globalContext.lang==='eng'){return(infoEng())}   
     }
 
     return(
-        chooseDraftEditorInfo()
+        chooseInfoToRender()
     )
 }
 
-export default MyEditorInfo;
+export default GitHelperInfo;

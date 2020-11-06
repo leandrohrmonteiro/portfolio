@@ -14,9 +14,10 @@
     "file-saver": "^2.0.2",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-animated-css": "^1.2.1",
     "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^4.0.0",
     "typescript": "^4.0.2"
   },
   "scripts": {
