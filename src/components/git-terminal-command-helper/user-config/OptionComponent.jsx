@@ -19,7 +19,7 @@ const OptionComponent= (props) => {
             
             <div>
                 <div className='componentTitle'>
-                    <h3>Input {props.label}:</h3>
+                    <h3>{props.title}:</h3>
                     <h5>{props.description}</h5>
                     <label className='componentSpaceBetweenFields' htmlFor={props.label}>{props.label}: </label>
                     <input 

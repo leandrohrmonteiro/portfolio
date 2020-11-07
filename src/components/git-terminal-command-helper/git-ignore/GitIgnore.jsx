@@ -23,7 +23,7 @@ const[resultOption, resultLabel, resultCodeBeforeInput,resultCode, resultDescrip
 
 const renderGitIgnorecomponent = () => {
 if(resultOption === option && resultOption !== 'None'){
-  return(<GitIgnoreComponent label={resultLabel} codebeforeinput={resultCodeBeforeInput} code={resultCode} description={resultDescription} />)}
+  return(<GitIgnoreComponent title={resultOption} label={resultLabel} codebeforeinput={resultCodeBeforeInput} code={resultCode} description={resultDescription} />)}
 }
 
   

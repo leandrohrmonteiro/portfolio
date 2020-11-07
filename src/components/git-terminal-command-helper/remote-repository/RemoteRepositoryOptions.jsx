@@ -62,8 +62,8 @@ const RemoteRepositoryOptions = [
     {
       id:6,
       selectedOption:'Rename remote',
-      label:'Add current name',
-      aditionalLabel:'Add new name',
+      label:'Current name',
+      aditionalLabel:'New name',
       hasUserInput:true,
       hasMultipleUserInput:true,
       isItAMessage:false,

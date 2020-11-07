@@ -13,14 +13,14 @@ const GitHelperInfo = () => {
     const infoEng = () => {
         return (
             <div className='col-sm-5 data-interval="false";' >
+            <h2>Git command terminal helper</h2><br/>
             <h3>Instructions:</h3><br/>
             
-            <p>- Click on 'Click here to start writing...' to activate editor's input field.</p>
-            <p>- The top button row hosts block styles, which can only be used one at a time.</p>
-            <p>- The styles in the second row of buttons can all be used in the same text selection.</p>
-            <p>- The bottom window will show the markdown equivalent to the stylized text of the top window.</p>
-            <p>- Copy/Paste operations are supported in both windows</p>
-            <p>- Sessions with markdown coding can be saved in txt files with the SAVE button.</p>
+            <p>- Select the type of operation to perform.</p>
+            <p>- Select option from drop down menu.</p>
+            <p>- Insert information if required.</p>
+            <p>- Copy/paste into terminal.</p>
+            
             <input
                   type='button'
                   value= 'Back to landingpage'
@@ -32,15 +32,14 @@ const GitHelperInfo = () => {
 
     const infoPort = () => {
         return (
-            <div className='col-sm-5 data-interval="false";' >
+            <div className='col-sm-5 data-interval="false" ' >
+            <h2>Tutor de comandos git para terminal</h2><br/>
             <h3>Instruções:</h3><br/>
 
-            <p>- Clicar em 'Click here to start writing...' para activar o input do editor.</p>
-            <p>- A linha de botões superior corresponde a estilos de linha e só podem ser usados á vez.</p>
-            <p>- A linha de botões seguinte permite a utilização de vários estilos na mesma selecção de texto.</p>
-            <p>- A janela inferior corresponde ao texto estilizado da janela superior, mas com codificação markdown.</p>
-            <p>- É possível executar operações de copy/paste a partir de ambas janelas.</p>
-            <p>- É possível salvar a sessão com a codificação markdown em ficheiro de extensão txt com o botão SAVE.</p>
+            <p>- Seleccione tipo de operação a executar.</p>
+            <p>- Seleccione opção do menu.</p>
+            <p>- Introduza informação se necessário.</p>
+            <p>- Copie resultado para terminal.</p>
             <input
                   type='button'
                   value= 'Voltar para a Pagina Inicial'

@@ -17,7 +17,7 @@ const whatCommandConfigurationToDisplay = () =>{
         if(props.hasMultipleUserInput===true){
             return(  
             <div className='componentTitle'>
-            <h3>Input {props.label}</h3>
+            <h3>{props.title}</h3>
                 <h5>{props.description}</h5>
               <label className='componentSpaceBetweenFields' htmlFor={props.label}>{props.label}: </label>
               <input
@@ -42,7 +42,7 @@ const whatCommandConfigurationToDisplay = () =>{
         if(props.hasMultipleUserInput===false && props.isItAMessage===false){
             return(  
                 <div className='componentTitle'>
-                <h3>Input {props.label}</h3>
+                <h3>{props.title}</h3>
                     <h5>{props.description}</h5>
                   <label className='componentSpaceBetweenFields' htmlFor={props.label}>{props.label}: </label>
                   <input
@@ -59,7 +59,7 @@ const whatCommandConfigurationToDisplay = () =>{
         if(props.hasMultipleUserInput===false && props.isItAMessage===true){
             return(  
                 <div className='componentTitle'>
-                <h3>Input {props.label}</h3>
+                <h3>{props.title}</h3>
                     <h5>{props.description}</h5>
                   <label className='componentSpaceBetweenFields' htmlFor={props.label}>{props.label}: </label>
                   <input
@@ -77,7 +77,7 @@ const whatCommandConfigurationToDisplay = () =>{
     if(props.hasUserInput===false){
         return(  
             <div className='componentTitle'>
-            <h3>{props.label}:</h3>
+            <h3>{props.title}</h3>
                 <h5>{props.description}</h5>
               
               <h3 className='componentSpaceBetweenFields'>Git terminal command is:</h3>

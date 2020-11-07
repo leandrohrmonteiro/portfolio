@@ -30,7 +30,7 @@ const[ resultOption, resultLabel, resultCode, resultDescription ] = resultObject
 const renderOptionComponent = () => {
 if(resultOption === option && resultOption !== 'None'){
   return(
-  <OptionComponent label={resultLabel} code={resultCode} description={resultDescription} />
+  <OptionComponent title={resultOption} label={resultLabel} code={resultCode} description={resultDescription} />
   )}
 }
 

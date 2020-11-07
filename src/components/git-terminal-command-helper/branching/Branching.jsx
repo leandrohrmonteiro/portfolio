@@ -41,6 +41,7 @@ const[resultOption,
 const renderBranchingComponent = () => {
 if(resultOption === option && resultOption !== 'None'){
   return(<BranchingComponent 
+  title={resultOption}
   label={resultLabel} 
   aditionalLabel={resultAditionalLabel}
   hasUserInput={resultHasUserInput} 

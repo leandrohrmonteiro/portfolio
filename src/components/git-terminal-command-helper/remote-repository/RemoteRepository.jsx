@@ -41,6 +41,7 @@ const[resultOption,
 const renderRemoteRepositoryComponent = () => {
 if(resultOption === option && resultOption !== 'None'){
   return(<RemoteRepositoryComponent 
+  title={resultOption}
   label={resultLabel} 
   aditionallabel={resultAditionalLabel}
   hasuserinput={resulthasuserinput} 

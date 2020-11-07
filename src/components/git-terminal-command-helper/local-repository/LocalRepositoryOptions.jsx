@@ -38,19 +38,19 @@ const LocalRepositoryOptions = [
     {
       id:4,
       selectedOption:'Track and stage inputed file',
-      label:'Track and stage',
+      label:'Track and stage file',
       aditionalLabel:'',
       hasUserInput:true,
       hasMultipleUserInput:false,
       isItAMessage:false,
       codeBeforeInput:true,
       code:'git add',
-      description:'Tracks and stages selected file. ( git add . ) will do so for   all files.'
+      description:'Tracks and stages selected file. ( git add . ) will do same for all files.'
       },
     {
       id:5,
       selectedOption:'Unstage file',
-      label:'Unstage',
+      label:'Unstage file',
       aditionalLabel:'',
       hasUserInput:true,
       hasMultipleUserInput:false,
@@ -62,7 +62,7 @@ const LocalRepositoryOptions = [
     {
       id:6,
       selectedOption:'Force remove file',
-      label:'Force remove',
+      label:'Force remove file',
       aditionalLabel:'',
       hasUserInput:true,
       hasMultipleUserInput:false,
@@ -74,7 +74,7 @@ const LocalRepositoryOptions = [
     {
       id:7,
       selectedOption:'Perform commit',
-      label:'Perform commit',
+      label:'Commit message',
       aditionalLabel:'',
       hasUserInput:true,
       hasMultipleUserInput:false,
@@ -86,7 +86,7 @@ const LocalRepositoryOptions = [
     {
       id:8,
       selectedOption:'Ammends last commit',
-      label:'Ammend last commit',
+      label:'Ammend message',
       aditionalLabel:'',
       hasUserInput:true,
       hasMultipleUserInput:false,
@@ -98,7 +98,7 @@ const LocalRepositoryOptions = [
     {
       id:9,
       selectedOption:'See commit log',
-      label:'See commit log',
+      label:'',
       aditionalLabel:'',
       hasUserInput:false,
       hasMultipleUserInput:false,
@@ -110,14 +110,14 @@ const LocalRepositoryOptions = [
     {
       id:10,
       selectedOption:'Travel to commit',
-      label:'Travel to',
+      label:'Imput commit hash',
       aditionalLabel:'',
       hasUserInput:true,
       hasMultipleUserInput:false,
       isItAMessage:false,
       codeBeforeInput:true,
       code:'git checkout',
-      description:'Transforms repository into commit snapshot inputed. ( git checkout master ) Transforms repository into the most recent commit.'
+      description:'Moves current position into imputed commit using hash'
       },
     
     ]

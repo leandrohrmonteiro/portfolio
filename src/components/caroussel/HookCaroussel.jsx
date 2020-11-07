@@ -5,7 +5,7 @@ import '../caroussel/Caroussel.scss';
 import ProjectOneScreen from '../../assets/project screenshots/movieDatabaseSearch.png'
 import ProjectTwoScreen from '../../assets/project screenshots/reactPortfolio.png'
 import ProjectThreeScreen from '../../assets/project screenshots/markdownEditor.png'
-import ProjectFourScreen from '../../assets/project screenshots/daPainter.png'
+import ProjectFourScreen from '../../assets/project screenshots/gitHelper.png'
 import FileCode from '../../assets/icons feather/file-plus.svg'
 
 function Caroussel() {
@@ -198,31 +198,30 @@ thirdSlideEnglish: (
         <div className='synopsis'>
     
         <button onMouseDown={sendToGitTerminalHelper}  className='code'>
-            Usar o Editor
+            Usar o Tutor
         </button>
         
     
         <h3>Tutor de comandos de terminal para Git</h3> 
-        <p> Esta aplicação usa Draft.js como base para um editor de texto com capacidades markdown.</p>
+        <p>Esta aplicação faz uso de menus e imput do utilizador para retornar o comando de terminal Git necessário.</p>
         
     
         <h3>Características:</h3>
         
         <ul>
-            <li>Activar e desactivar multiplos estilos no mesmo texto.</li> 
-            <li>Comparar texto estilizado com o equivalente em markdown na janela inferior.</li>
-            <li>Gravar resultado de sessão num ficheiro de extensão txt.</li>
+            <li>Selecção de opções por menu.</li> 
+            <li>Imput de informação por utilizador.</li>
+            <li>Retorno de comando Git para terminal customizado pelo imput do utilizador.</li>
         </ul>
         
         <h3>Tecnologia usada:</h3>
         <ul>
         <li>React.js</li> 
-                <li>Draft.js</li>
                 <li>Javascript ES6</li>
                 <li>Jsx</li>
                 <li>HTML5</li>
                 <li>CSS3</li>
-                <li>sass</li>
+                <li>scss</li>
                 <li>Bootstrap</li>
         </ul>
     
@@ -233,28 +232,27 @@ thirdSlideEnglish: (
         <div className='synopsis'>
     
         <button onMouseDown={sendToGitTerminalHelper}  className='code'>
-            Use the Editor
+            Use the Tutor
         </button>
-            <h3>Git terminal command helper</h3> 
-            <p>This application uses Draft.js as a basis for a rich text editor with markdown capabilities.<br />
+            <h3>Git terminal command tutor</h3> 
+            <p>This application uses menus and user imput to return the required git terminal command.<br />
             </p>
              <h3>Features:</h3>
              
                 <ul>
-                    <li>Toggling multiple text styles.</li> 
-                    <li>Comparing stylized text to its markdown equivalent in the bottom window.</li>
-                    <li>Save session in a txt file.</li>
+                    <li>Menu option selection.</li> 
+                    <li>Imput of information by user.</li>
+                    <li>Return of git terminal command customized by user imput.</li>
                 </ul>
             
             <h3>Technology used:</h3>
             <ul>
                 <li>React.js</li> 
-                <li>Draft.js</li>
                 <li>Javascript ES6</li>
                 <li>Jsx</li>
                 <li>HTML5</li>
                 <li>CSS3</li>
-                <li>sass</li>
+                <li>scss</li>
                 <li>Bootstrap</li>
             </ul>
             
@@ -295,7 +293,7 @@ return(
 
                 
             <div className="carousel-item active">           
-                <img className='img-fluid' src={ProjectFourScreen} alt="fourth project" />   
+                <img className='img-fluid img-border' src={ProjectFourScreen} alt="fourth project" />   
                     <div className="d-md-block">
                         {fourthSlide()}
                         <p></p>
@@ -303,7 +301,7 @@ return(
                 </div>
                 
                 <div className="carousel-item">           
-                <img className='img-fluid' src={ProjectThreeScreen} alt="third project" />   
+                <img className='img-fluid img-border' src={ProjectThreeScreen} alt="third project" />   
                     <div className="d-md-block">
                         {thirdSlide()}
                         <p></p>
@@ -311,7 +309,7 @@ return(
                 </div>
 
                 <div className="carousel-item">
-                <img className='img-fluid' src={ProjectTwoScreen} alt="second project" />  
+                <img className='img-fluid img-border' src={ProjectTwoScreen} alt="second project" />  
                     <div className="d-md-block">
                     {secondSlide()}
                     <p></p>
@@ -320,7 +318,7 @@ return(
 
 
                 <div className="carousel-item">
-                <img className='img-fluid' src={ProjectOneScreen} alt="first project" />
+                <img className='img-fluid img-border' src={ProjectOneScreen} alt="first project" />
                     <div className="d-md-block">
                     {firstSlide()}
                         <p></p>

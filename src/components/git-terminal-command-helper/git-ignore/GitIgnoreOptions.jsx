@@ -36,7 +36,7 @@ const GitIgnoreOptions = [
       label:'Ignore file in root folder',
       codeBeforeInput:true,
       code:'/',
-      description:'Ignores all instances of inputed file'
+      description:'Ignores inputed file in root directory of current repository'
     },
     {
       id:6,

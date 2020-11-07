@@ -40,7 +40,8 @@ const[resultOption,
 
 const renderLocalRepositoryComponent = () => {
 if(resultOption === option && resultOption !== 'None'){
-  return(<LocalRepositoryComponent 
+  return(<LocalRepositoryComponent
+  title={resultOption} 
   label={resultLabel} 
   aditionallabel={resultAditionalLabel}
   hasuserinput={resulthasuserinput} 
