@@ -13,7 +13,7 @@ const GitHelperInfo = () => {
     const infoEng = () => {
         return (
             <div className='col-sm-5 data-interval="false";' >
-            <h2>Git command terminal helper</h2><br/>
+            <h2>Git terminal command helper</h2><br/>
             <h3>Instructions:</h3><br/>
             
             <p>- Select the type of operation to perform.</p>
