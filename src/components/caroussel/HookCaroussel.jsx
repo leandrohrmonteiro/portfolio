@@ -5,7 +5,7 @@ import '../caroussel/Caroussel.scss';
 import ProjectOneScreen from '../../assets/project screenshots/movieDatabaseSearch.png'
 import ProjectTwoScreen from '../../assets/project screenshots/reactPortfolio.png'
 import ProjectThreeScreen from '../../assets/project screenshots/markdownEditor.png'
-import ProjectFourScreen from '../../assets/project screenshots/gitHelper.png'
+import ProjectFourScreen from '../../assets/project screenshots/gitTutor.png'
 import FileCode from '../../assets/icons feather/file-plus.svg'
 
 function Caroussel() {
