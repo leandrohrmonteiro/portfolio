@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.1b53112f.chunk.css",
-    "main.js": "/portfolio/static/js/main.00797e29.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.00797e29.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.d0c52be8.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.d0c52be8.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.9adcde90.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.9adcde90.js.map",
     "static/css/2.e426f036.chunk.css": "/portfolio/static/css/2.e426f036.chunk.css",
@@ -14,7 +14,7 @@
     "static/js/2.befb5892.chunk.js.LICENSE.txt": "/portfolio/static/js/2.befb5892.chunk.js.LICENSE.txt",
     "static/media/face.6452a23e.png": "/portfolio/static/media/face.6452a23e.png",
     "static/media/file-plus.c4af7397.svg": "/portfolio/static/media/file-plus.c4af7397.svg",
-    "static/media/gitHelper.2a56d4e6.png": "/portfolio/static/media/gitHelper.2a56d4e6.png",
+    "static/media/gitTutor.cf724019.png": "/portfolio/static/media/gitTutor.cf724019.png",
     "static/media/github.d1578c21.svg": "/portfolio/static/media/github.d1578c21.svg",
     "static/media/markdownEditor.4c652fc9.png": "/portfolio/static/media/markdownEditor.4c652fc9.png",
     "static/media/movieDatabaseSearch.141ee749.png": "/portfolio/static/media/movieDatabaseSearch.141ee749.png",
@@ -25,6 +25,6 @@
     "static/css/2.e426f036.chunk.css",
     "static/js/2.befb5892.chunk.js",
     "static/css/main.1b53112f.chunk.css",
-    "static/js/main.00797e29.chunk.js"
+    "static/js/main.d0c52be8.chunk.js"
   ]
 }
