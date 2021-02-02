@@ -11,11 +11,11 @@ function HookHeader() {
   const [globalContext, setGlobalContext] = useContext(GlobalContext);
 
   const [flag, setFlag] = useState({
-    flagPort: PortActive,
-    flagPortDisabled: true,
-    flagEng: EngInactive,
-    flagEngDisabled: false,
-    name: 'Desenvolvimento Front End',
+    flagPort: PortInactive,
+    flagPortDisabled: false,
+    flagEng: EngActive,
+    flagEngDisabled: true,
+    name: 'Front End Development'
   });
 
 
